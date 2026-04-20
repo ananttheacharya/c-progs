@@ -1,6 +1,6 @@
 # 📘 C Programs — Practice Questions & Documentation
 
-A collection of C programs focused on **pointers**, **functions**, and **arrays**.  
+A collection of C programs focused on **pointers**, **functions**, **arrays**, **strings**, and **structures**.  
 Each program below is linked to the question it solves, along with a short description of how it works.
 
 ---
@@ -16,6 +16,12 @@ Each program below is linked to the question it solves, along with a short descr
 | 5 | [thiswillnotworkpakkase.c](#5-thiswillnotworkpakkasec) | Find the largest element in an array using pointers |
 | 6 | [thiswillnotwork.c](#6-thiswillnotworkc) | Reverse an array in-place using pointers |
 | 7 | [iswearthisworks.c](#7-iswearthisworksc) | Process array elements — add 2 to even numbers and 4 to odd numbers |
+| 8 | [armstrongnumber.c](#8-armstrongnumberc) | Print all Armstrong numbers between 1 and 500 |
+| 9 | [dumbsquarebs.c](#9-dumbsquarebsc) | Calculate the square of a number using a function |
+| 10 | [okayletssee.c](#10-okayletsseec) | Reverse a string and print it character by character |
+| 11 | [what about this .c](#11-what-about-this-c) | Menu-driven program for sum, factorial, and prime check |
+| 12 | [structure 1 .c](#12-structure-1-c) | Store and display student details using a structure |
+| 13 | [structure 2.c](#13-structure-2c) | Calculate a batsman's batting average using a structure and pointer |
 
 ---
 
@@ -131,16 +137,121 @@ Each program below is linked to the question it solves, along with a short descr
 
 ---
 
+## 8. `armstrongnumber.c`
+
+### ❓ Question
+> Write a C program that finds and prints all **Armstrong numbers** between 1 and 500. A number is Armstrong if the sum of the cubes of its digits equals the number itself.
+
+### 📝 Description
+- Loops through every number from 1 to 500.
+- For each number, extracts digits, cubes them, and sums up the cubes.
+- Prints the number if the sum equals the original number.
+
+### 💡 Concepts Covered
+- Loops (`for`, `while`)
+- Digit extraction using modulo and division
+- Number theory (Armstrong / narcissistic numbers)
+
+---
+
+## 9. `dumbsquarebs.c`
+
+### ❓ Question
+> Write a C program that takes an integer as input and prints its **square** using a separate `square()` function that returns the result.
+
+### 📝 Description
+- Defines a function `square(int a)` that computes and returns `a * a`.
+- Calls the function from `main()` and displays the result.
+
+### 💡 Concepts Covered
+- Functions with return values
+- Passing arguments to functions
+- Basic arithmetic
+
+---
+
+## 10. `okayletssee.c`
+
+### ❓ Question
+> Write a C program that accepts a string from the user and prints it in **reverse order**, character by character.
+
+### 📝 Description
+- Reads a string using `scanf()`.
+- Uses `strlen()` to find the length, then loops from the last character to the first, printing each character.
+
+### 💡 Concepts Covered
+- Strings and `strlen()`
+- Loops (`for`)
+- Character-by-character string traversal
+
+---
+
+## 11. `what about this .c`
+
+### ❓ Question
+> Write a **menu-driven** C program that offers three options: (1) find the sum of two numbers, (2) find the factorial of a number, and (3) check if a number is prime. Use separate functions for each operation.
+
+### 📝 Description
+- Presents a menu and reads the user's choice using `scanf()`.
+- Uses a `switch` statement to dispatch to the appropriate function: `sum()`, `factorial()`, or `prime()`.
+- Each function handles its own input and output.
+
+### 💡 Concepts Covered
+- `switch` statements
+- Menu-driven programs
+- Functions (sum, factorial, prime check)
+- Loops
+
+---
+
+## 12. `structure 1 .c`
+
+### ❓ Question
+> Write a C program using a **structure** to store a student's admission number, name, and marks in three subjects (English, Maths, Science). Calculate and display the total marks.
+
+### 📝 Description
+- Defines a `struct student` with fields for admission number, name, and three subject marks, plus a `total`.
+- Reads all details from the user, computes the total in `main()`, and prints a formatted summary.
+
+### 💡 Concepts Covered
+- Structures (`struct`)
+- Structure members and the dot (`.`) operator
+- Input/output with `scanf()` and `printf()`
+
+---
+
+## 13. `structure 2.c`
+
+### ❓ Question
+> Write a C program using a **structure** to store a batsman's details (code, name, innings, not-outs, runs) and compute his **batting average** using a function that accepts a pointer to the structure.
+
+### 📝 Description
+- Defines a `struct batsman` with relevant cricket statistics.
+- Passes a pointer to the structure into `calcavg()`, which computes `runs / (innings - notout)` using the `->` operator.
+- Handles the edge case where `innings == notout` to avoid division by zero.
+
+### 💡 Concepts Covered
+- Structures (`struct`)
+- Pointers to structures and the arrow (`->`) operator
+- Functions with structure pointers
+- Edge case handling
+
+---
+
 ## 🔑 Key Themes Across All Programs
 
 | Concept | Programs That Use It |
 |---|---|
-| Pointers & dereferencing | All 7 programs |
-| Call by reference | `minishasterribleattempt.c`, `anothaone.c`, `okay.c` |
+| Pointers & dereferencing | `minishasterribleattempt.c`, `anothaone.c`, `okay.c`, `okaytwo.c`, `thiswillnotwork.c`, `thiswillnotworkpakkase.c`, `iswearthisworks.c`, `structure 2.c` |
+| Call by reference | `minishasterribleattempt.c`, `anothaone.c`, `okay.c`, `structure 2.c` |
 | Array traversal with pointer arithmetic | `okaytwo.c`, `thiswillnotwork.c`, `thiswillnotworkpakkase.c`, `iswearthisworks.c` |
-| Conditional logic (`if-else`) | `anothaone.c`, `okay.c`, `iswearthisworks.c` |
-| Loops | `okay.c`, `okaytwo.c`, `thiswillnotwork.c`, `thiswillnotworkpakkase.c`, `iswearthisworks.c` |
-| Returning values from functions | `okaytwo.c`, `thiswillnotworkpakkase.c` |
+| Conditional logic (`if-else`) | `anothaone.c`, `okay.c`, `iswearthisworks.c`, `what about this .c`, `structure 2.c` |
+| Loops | `okay.c`, `okaytwo.c`, `thiswillnotwork.c`, `thiswillnotworkpakkase.c`, `iswearthisworks.c`, `armstrongnumber.c`, `okayletssee.c`, `what about this .c` |
+| Returning values from functions | `okaytwo.c`, `thiswillnotworkpakkase.c`, `dumbsquarebs.c`, `what about this .c` |
+| Strings & `strlen()` | `okayletssee.c` |
+| Structures (`struct`) | `structure 1 .c`, `structure 2.c` |
+| Switch / menu-driven logic | `what about this .c` |
+| Number theory (Armstrong) | `armstrongnumber.c` |
 
 ---
 
